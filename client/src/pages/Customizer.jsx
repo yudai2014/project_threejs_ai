@@ -54,7 +54,7 @@ const Customizer = () => {
       // call our backend to generate the image!
       setGeneratingImg(true);
       
-      const response = await fetch('http://localhost:8080/api/v1/dalle', { 
+      const response = await fetch('https://project-threejs-ai-3.onrender.com/api/v1/dalle', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -166,6 +166,14 @@ const Customizer = () => {
                   handleClick={() => handleActiveFilterTab(tab.name)}
                 />
             ))} 
+            {/* Download button */}
+              <button className='download-btn' onClick={downloadCanvasToImage}>
+              <img
+                src={download}
+                alt='download_image'
+                className='w-3/5 h-3/5 object-contain'
+              />
+              </button>
             </motion.div>
         </>
       )}
