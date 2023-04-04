@@ -54,7 +54,7 @@ const Customizer = () => {
       // call our backend to generate the image!
       setGeneratingImg(true);
       
-      const response = await fetch('https://project-threejs-ai-3.onrender.com/api/v1/dalle', { 
+      const response = await fetch('https://project-threejs-ai-4.onrender.com/api/v1/dalle', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
